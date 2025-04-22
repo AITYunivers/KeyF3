@@ -1,33 +1,36 @@
 {
   "schemaVersion": 1,
-  "id": "%s",
+  "id": "keyf3",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Key F3",
+  "description": "A mod that backports the F3 keybinds",
   "authors": [
-    "Me!"
+    "Yunivers"
   ],
   "contact": {
-    "homepage": "https://glass-launcher.net/",
-    "sources": "https://github.com/calmilamsy/stationapi-example-mod"
+    "homepage": "https://github.com/AITYunivers/KeyF3",
+    "sources": "https://github.com/AITYunivers/KeyF3",
+    "issues": "https://github.com/AITYunivers/KeyF3/issues"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/%s/icon.png",
+  "license": "MIT",
+  "icon": "assets/keyf3/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "%s.events.init.InitListener"
+      "io.github.yunivers.keyf3.events.init.InitListener"
     ],
     "stationapi:event_bus_client": [
+      "io.github.yunivers.keyf3.registry.F3BindRegistry",
+      "io.github.yunivers.keyf3.events.init.BindListener"
     ],
     "stationapi:event_bus_server": [
     ]
   },
   "mixins": [
-    "%s.mixins.json"
+    "keyf3.mixins.json"
   ],
 
   "depends": {
