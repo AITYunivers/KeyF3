@@ -9,7 +9,8 @@
   "server": [
   ],
   "client": [
-    "ClientPlayerEntityMixin"
+    "ClientPlayerEntityMixin",
+    "binds.EntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

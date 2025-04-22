@@ -10,6 +10,7 @@ import java.lang.invoke.MethodHandles;
 public class KeyF3
 {
     public static boolean debugBindPressed;
+    public static boolean renderHitboxes;
     public static final Namespace NAMESPACE = Namespace.resolve();
     public static final Logger LOGGER = NAMESPACE.getLogger();
 

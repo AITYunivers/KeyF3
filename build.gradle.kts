@@ -15,7 +15,7 @@ version = project.properties["mod_version"] as String
 group = project.properties["maven_group"] as String
 
 loom {
-//	accessWidenerPath = file("src/main/resources/keyf3.accesswidener")
+	accessWidenerPath = file("src/main/resources/keyf3.accesswidener")
 
 	runs {
 		// If you want to make a testmod for your mod, right click on src, and create a new folder with the same name as source() below.
@@ -38,6 +38,7 @@ repositories {
 	maven("https://maven.glass-launcher.net/releases/")
 	maven("https://maven.glass-launcher.net/babric")
 	maven("https://maven.minecraftforge.net/")
+	maven("https://maven.fildand.cz/releases")
 	maven("https://jitpack.io/")
 	mavenCentral()
 	exclusiveContent {
@@ -82,6 +83,8 @@ dependencies {
 	modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.properties["alwaysmoreitems_version"]}")
 	// https://github.com/matthewperiut/retrocommands
 	modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
+	// https://github.com/DanyGames2014/spawneggs (Crashes, fuck you Dany)
+	//modImplementation("net.danygames2014:spawneggs:${project.properties["spawneggs_version"]}")
 }
 
 tasks.withType<ProcessResources> {

@@ -64,6 +64,8 @@ public class F3BindRegistry extends SimpleRegistry<F3Bind>
     public static void registerF3Binds(F3BindRegistryEvent event)
     {
         event.register(NAMESPACE)
+            .accept("f3bind_reloadChunks", new F3Bind("Reload chunks", Keyboard.KEY_A, "Reloading all chunks"))
+            .accept("f3bind_showHitboxes", new F3Bind("Show hitboxes", Keyboard.KEY_B))
             .accept("f3bind_showBinds", new F3Bind("Show this list", Keyboard.KEY_Q, "Key bindings:"));
     }
 }
