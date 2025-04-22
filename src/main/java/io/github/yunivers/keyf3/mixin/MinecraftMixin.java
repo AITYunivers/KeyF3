@@ -11,7 +11,6 @@ import net.minecraft.client.option.GameOptions;
 import net.minecraft.entity.player.ClientPlayerEntity;
 import net.modificationstation.stationapi.api.StationAPI;
 import org.lwjgl.input.Keyboard;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -70,13 +69,16 @@ public class MinecraftMixin
 	@WrapOperation(
 		method = "tick",
 		at = @At(
-			value = "FIELD",
-			target = "Lnet/minecraft/client/option/GameOptions;debugHud:Z",
-			opcode = Opcodes.GETFIELD
+			value = "INVOKE",
+			target = "Lorg/lwjgl/input/Keyboard;getEventKey()I",
+			remap = false
 		)
 	)
-	public boolean keyf3$tick_disableDebugHudToggle(GameOptions instance, Operation<Boolean> original)
+	public int keyf3$tick_disableKey(Operation<Integer> original)
 	{
-		return !this.options.debugHud;
+		int key = original.call();
+		if (key == Keyboard.KEY_F3 || Keyboard.isKeyDown(Keyboard.KEY_F3) && F3BindRegistry.hasBind(key))
+			return 0;
+		return key;
 	}
 }
