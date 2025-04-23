@@ -61,6 +61,9 @@ public class GameRendererMixin
             int z = player.chunkZ * 16;
             int color = y % 16 == 0 ? 0x3F3FFF : y % 8 == 0 ? 0x009B9B : 0xFFFF00;
 
+            if (y == 128)
+                y--;
+
             renderLine(new Vector3f(x, y, z), new Vector3f(x, y, z + 16), color);
             renderLine(new Vector3f(x, y, z + 16), new Vector3f(x + 16, y, z + 16), color);
             renderLine(new Vector3f(x + 16, y, z + 16), new Vector3f(x + 16, y, z), color);
