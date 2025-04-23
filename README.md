@@ -1,28 +1,30 @@
-# Fabric Example Mod with StationAPI and BIN Mappings for beta 1.7.3 server + client
+# KeyF3
 
-## Setup
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/aY2WFGPBBB)
 
-Run the `_setup/setupMod` task and give it the inputs it needs. **This is a required step.**
+A Beta 1.7.3 backport of modern F3 bindings
 
-[See the StationAPI wiki.](https://github.com/ModificationStation/StationAPI/wiki)
+## Commands
+- [F3 + A] Reload chunks
+- [F3 + B] Show hitboxes
+- [F3 + C] Copy location as /tp command, hold F3 + C to crash the game
+- [F3 + D] Clear chat
+- [F3 + G] Show chunk boundaries
+- [F3 + P] Pause on lost focus
+- [F3 + Q] Show this list
+- [F3 + T] Reload resource packs
+- [F3 + Esc] Pause without pause menu (if pausing is possible)
+- [F3 + F4] Cycle survival <-> creative (Requires [BHCreative](https://github.com/paulevsGitch/BHCreative))
 
-## Common Issues
+## Dependencies
+This mod requires the following mods
 
-**My project isn't building after updating babric loom/stationapi!**  
-Run a gradle task with `--refresh-dependencies` as an argument, and this should be fixed. If not, try deleting your project's `.gradle` folder, and try again.
+- [Babric](https://github.com/babric/prism-instance)
+- [StationAPI 2.0.0-alpha.4](https://github.com/ModificationStation/StationAPI/releases/tag/2.0.0-alpha.4)
 
-**I get "Invalid source release: 17" as an error!**  
-Use Java 17. Open up `File > Project Structure` and change your SDK to Java 17.  
-If you still get the issue, you may need to go into `File > Settings > Build, Execution, Deployment > Build Tools > Gradle` and change the Java that Gradle uses too.
-
-**How do I stop server.properties from constantly changing?**  
-Remove the last line in the `gitignore` file.
-
-**My client hangs on a blank screen on trying to my test server!**  
-Open your `server.properties` and set `online-mode` to `false`.
-
-[Here for more issues.](https://github.com/calmilamsy/BIN-fabric-example-mod#common-issues)
+## Screenshots
+![Chunk Borders and Command List](https://i.imgur.com/eJGv3I8.png)
+![Entity Hitboxes](https://i.imgur.com/JxeUYaF.png)
 
 ## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+All code/assets from this project are licensed under the [MIT License](https://tldrlegal.com/license/mit-license)
