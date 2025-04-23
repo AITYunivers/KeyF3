@@ -2,3 +2,5 @@ accessWidener v2 named
 
 accessible field net/minecraft/client/Minecraft INSTANCE Lnet/minecraft/client/Minecraft;
 accessible method net/minecraft/client/render/WorldRenderer renderOutline (Lnet/minecraft/util/math/Box;)V
+accessible field net/minecraft/client/gui/screen/GameMenuScreen saveStep I
+accessible field net/minecraft/client/gui/screen/GameMenuScreen ticks I

@@ -4,13 +4,15 @@
   "package": "io.github.yunivers.keyf3.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "MinecraftMixin"
   ],
   "server": [
   ],
   "client": [
     "ClientPlayerEntityMixin",
-    "binds.EntityRendererMixin"
+    "MinecraftMixin",
+    "binds.EntityRendererMixin",
+    "binds.GameRendererMixin",
+    "binds.MinecraftMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -84,7 +84,9 @@ dependencies {
 	// https://github.com/matthewperiut/retrocommands
 	modImplementation("maven.modrinth:retrocommands:${project.properties["retrocommands_version"]}")
 	// https://github.com/DanyGames2014/spawneggs (Crashes, fuck you Dany)
-	//modImplementation("net.danygames2014:spawneggs:${project.properties["spawneggs_version"]}")
+//	modImplementation("net.danygames2014:spawneggs:${project.properties["spawneggs_version"]}")
+	// https://github.com/paulevsGitch/BHCreative
+	modImplementation ("com.github.paulevsGitch:BHCreative:${project.properties["bhcreative_version"]}")
 }
 
 tasks.withType<ProcessResources> {
